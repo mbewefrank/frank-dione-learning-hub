@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Frank Dione Learning Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#"><span>FD</span> Frank Dione Learning Hub</a>
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#plans">Plans</a>
+    <button class="btn btn-outline" onclick="openModal('loginModal')">Log in</button>
+    <button class="btn" onclick="openModal('registerModal')">Create account</button>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <p class="eyebrow">LEARN • ACCESS • GROW</p>
+    <h1>Your learning library, <span>protected.</span></h1>
+    <p class="lead">Access organized academic resources through a secure, subscription-based learning platform.</p>
+    <div class="actions">
+      <button class="btn btn-large" onclick="openModal('registerModal')">Get started</button>
+      <a class="btn btn-ghost btn-large" href="#plans">View plans</a>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="card-top"><span>Student Library</span><span class="pill">Premium</span></div>
+    <div class="doc"><b>Engineering Mathematics</b><small>12 resources</small></div>
+    <div class="doc"><b>Mining Engineering</b><small>24 resources</small></div>
+    <div class="doc"><b>Geology</b><small>18 resources</small></div>
+    <div class="locked">🔒 Protected access</div>
+  </div>
+</section>
+
+<section id="features" class="section">
+  <p class="eyebrow">PLATFORM</p>
+  <h2>Built around your learning library</h2>
+  <div class="grid three">
+    <article class="feature"><div class="icon">📚</div><h3>Protected documents</h3><p>Resources are served through an authenticated viewer rather than public file links.</p></article>
+    <article class="feature"><div class="icon">👤</div><h3>Student profiles</h3><p>Every learner gets an account, subscription status and personalized library access.</p></article>
+    <article class="feature"><div class="icon">📱</div><h3>Mobile Money</h3><p>Subscription checkout is designed for MTN, Airtel and Zamtel Money in Zambia.</p></article>
+  </div>
+</section>
+
+<section id="plans" class="section plans">
+  <p class="eyebrow">SUBSCRIPTIONS</p>
+  <h2>Choose your access</h2>
+  <div class="grid four">
+    <article class="plan"><h3>Free</h3><div class="price">K0</div><p>Selected resources</p><button class="btn btn-outline" onclick="openModal('registerModal')">Start free</button></article>
+    <article class="plan"><h3>Basic</h3><div class="price">K49<span>/month</span></div><p>Standard library access</p><button class="btn" onclick="openModal('paymentModal')">Subscribe</button></article>
+    <article class="plan featured"><div class="recommended">RECOMMENDED</div><h3>Premium</h3><div class="price">K99<span>/month</span></div><p>Full document library</p><button class="btn" onclick="openModal('paymentModal')">Subscribe</button></article>
+    <article class="plan"><h3>Annual</h3><div class="price">K999<span>/year</span></div><p>Full library + annual value</p><button class="btn btn-outline" onclick="openModal('paymentModal')">Subscribe</button></article>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>One account. One learning library.</h2>
+  <p>Start with the free plan and upgrade when you need full access.</p>
+  <button class="btn btn-large" onclick="openModal('registerModal')">Create your account</button>
+</section>
+</main>
+
+<footer><b>Frank Dione Learning Hub</b><span>© 2026</span></footer>
+
+<div class="modal" id="loginModal"><div class="modal-box"><button class="close" onclick="closeModal('loginModal')">×</button><h2>Welcome back</h2><input placeholder="Email address" type="email"><input placeholder="Password" type="password"><button class="btn full">Log in</button><p class="muted">Demo interface — backend authentication comes next.</p></div></div>
+<div class="modal" id="registerModal"><div class="modal-box"><button class="close" onclick="closeModal('registerModal')">×</button><h2>Create your profile</h2><input placeholder="Full name"><input placeholder="Email address" type="email"><input placeholder="Phone number"><input placeholder="Password" type="password"><button class="btn full">Create account</button><p class="muted">Your account will be linked to your subscription.</p></div></div>
+<div class="modal" id="paymentModal"><div class="modal-box"><button class="close" onclick="closeModal('paymentModal')">×</button><h2>Mobile Money</h2><p class="muted">Select your network.</p><div class="network-grid"><button onclick="selectNetwork(this)">MTN MoMo</button><button onclick="selectNetwork(this)">Airtel Money</button><button onclick="selectNetwork(this)">Zamtel Money</button></div><input placeholder="09XXXXXXXX" inputmode="tel"><button class="btn full" onclick="alert('Demo payment flow. Live API credentials will be connected in the backend.')">Continue to payment</button><p class="muted">Never enter your Mobile Money PIN on this website.</p></div></div>
+
+<script src="app.js"></script>
+</body>
+</html>
