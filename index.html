@@ -71,6 +71,7 @@
 <div class="modal" id="registerModal"><div class="modal-box"><button class="close" onclick="closeModal('registerModal')">×</button><h2>Create your profile</h2><input placeholder="Full name"><input placeholder="Email address" type="email"><input placeholder="Phone number"><input placeholder="Password" type="password"><button class="btn full">Create account</button><p class="muted">Your account will be linked to your subscription.</p></div></div>
 <div class="modal" id="paymentModal"><div class="modal-box"><button class="close" onclick="closeModal('paymentModal')">×</button><h2>Mobile Money</h2><p class="muted">Select your network.</p><div class="network-grid"><button onclick="selectNetwork(this)">MTN MoMo</button><button onclick="selectNetwork(this)">Airtel Money</button><button onclick="selectNetwork(this)">Zamtel Money</button></div><input placeholder="09XXXXXXXX" inputmode="tel"><button class="btn full" onclick="alert('Demo payment flow. Live API credentials will be connected in the backend.')">Continue to payment</button><p class="muted">Never enter your Mobile Money PIN on this website.</p></div></div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="app.js"></script>
 </body>
 </html>
