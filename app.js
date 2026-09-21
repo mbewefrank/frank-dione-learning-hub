@@ -1,5 +1,5 @@
 const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_E7M_IvJn6U4-Q9tlaX7iug_Ft0W3fp_";
-const SUPABASE_URL = "https://pmwsecsmnyieeudqlbfd.supabase.co/rest/v1/";
+const SUPABASE_URL = "https://pmwsecsmnyieeudqlbfd.supabase.co";
 
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
 console.log("Supabase connected:", !!supabase);
